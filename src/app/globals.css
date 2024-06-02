@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply text-base bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-100 font-normal  leading-normal;
+  }
+}
+/* editor styles*/
+.fr-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.fr-wrapper {
+  /* display: none; */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.fr-box.fr-basic .fr-wrapper {
+  @apply dark:border-gray-400
+}
+
+.fr-toolbar .fr-newline {
+  @apply dark:bg-gray-400
+}
+
+.fr-toolbar.fr-top {
+  @apply dark:bg-gray-800 dark:text-gray-100 dark:border-gray-400
+}
+
+.fr-second-toolbar {
+  @apply dark:bg-gray-800 dark:text-gray-100 dark:border-gray-400
+}
+
+.fr-box.fr-basic .fr-element {
+  @apply dark:bg-gray-800 dark:text-gray-100
+}
+
+.fr-box.fr-basic .fr-element>p:not([style]) {
+  @apply dark:text-gray-100
+}
+
+.fr-box .fr-visible a.fr-floating-btn {
+  @apply flex items-center
+}
+
+.fr-box.fr-basic .fr-element p a:not([class]) {
+  @apply text-blue-700 underline;
+}
+
+.fr-box.fr-basic .fr-element ul:not([style]) li {
+  @apply list-disc list-inside ml-3;
+}
+
+.fr-box.fr-basic .fr-element ol:not([style]) li {
+  @apply list-decimal list-inside ml-3;
+}
+
+.fr-box.fr-basic .fr-element ul li {
+  @apply ml-3;
+}
+
+.fr-box.fr-basic .fr-element ol li {
+  @apply ml-3;
+}
+
+.fr-box.fr-basic .fr-element:has() {
+  @apply fill-white;
+}
+
+.fr-box a.fr-floating-btn svg {
+  @apply inline align-baseline
+}
+
+.fr-toolbar .fr-command.fr-btn svg path,
+.fr-popup .fr-command.fr-btn svg path,
+.fr-modal .fr-command.fr-btn svg path {
+  /* fill: #b6b4b4 !important; */
+  @apply dark:fill-gray-100 dark:hover:fill-gray-700
+}
